@@ -7,8 +7,8 @@
 #SBATCH --job-name=MILK10k_Seg 
 
 # Output and error files will be placed next to the Python script.
-#SBATCH --output=/project/def-arashmoh/shahab33/XAI/MILK10k_Training_Input/segment-anything-2/MILK10k_Seg-%j.out
-#SBATCH --error=/project/def-arashmoh/shahab33/XAI/MILK10k_Training_Input/segment-anything-2/MILK10k_Seg-%j.err
+#SBATCH --output=/project/def-arashmoh/shahab33/XAI/MILK10k_Training_Input/Sam/MILK10k_Seg-%j.out
+#SBATCH --error=/project/def-arashmoh/shahab33/XAI/MILK10k_Training_Input/Sam/MILK10k_Seg-%j.err
 
 echo "Starting job on $(hostname) at $(date)"
 
@@ -23,11 +23,11 @@ echo "Modules loaded."
 source /lustre06/project/def-arashmoh/shahab33/XAI/milk10k_env/bin/activate
 echo "Virtual environment activated."
 
-# Navigate to the working directory
-cd /project/def-arashmoh/shahab33/XAI/MILK10k_Training_Input
+# Navigate to the directory where the Python script and model are located
+cd /project/def-arashmoh/shahab33/XAI/MILK10k_Training_Input/Sam
 echo "Working directory set to $(pwd)"
 
 # Run your Python script
-python segment-anything-2/Seg.py
+python Seg.py
 
 echo "Job finished at $(date)"
