@@ -20,7 +20,7 @@ module load opencv/4.12.0
 echo "Modules loaded."
 
 # Activate your virtual environment
-source /lustre06/project/def-arashmoh/shahab33/XAI/milk10k_env/bin/activate
+source /project/def-arashmoh/shahab33/XAI/milk10k_env/bin/activate
 echo "Virtual environment activated."
 
 # Navigate to the directory where the Python script and model are located
